@@ -260,6 +260,9 @@ function reveal() {
     loop();
     anim();
 
+    // Reveal the moon by changing the display style
+    document.getElementById("moon").style.display = "block"; // Show the moon when step 4 is reached
+
     var w, h;
     if (window.innerWidth >= 1000) {
         w = 295;
