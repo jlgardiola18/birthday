@@ -688,3 +688,23 @@ window.addEventListener('resize', function() {
 
     ctx.font = opts.charSize + 'px Verdana';
 })
+
+
+// Function to toggle the visibility of the hidden message
+function toggleMessage() {
+    const message = document.getElementById('hidden-message');
+
+    // If the message is hidden, show it
+    if (message.style.display === 'none' || message.style.opacity === '0') {
+        message.style.display = 'block'; // Make the message visible
+        setTimeout(() => {
+            message.style.opacity = 1; // Fade in the message
+        }, 10); // Small delay to allow for display change to take effect
+    } else {
+        // If the message is visible, hide it
+        message.style.opacity = 0; // Fade out the message
+        setTimeout(() => {
+            message.style.display = 'none'; // Hide the message after fade-out
+        }, 1000); // Wait for the fade-out transition before setting display to 'none'
+    }
+}
