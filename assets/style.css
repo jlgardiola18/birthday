@@ -22,14 +22,6 @@ canvas#canvas {
     height: 100%;
 }
 
-div#beach {
-    background-image: url(https://dl.dropbox.com/s/oe0oce2udq44bj5/beachsil2.png);
-    /* background-size: cover; */
-    background-position: bottom right;
-    background-size: 1700px;
-    background-repeat: no-repeat;
-}
-
 div#video {
     position: absolute;
     right: 243px;
@@ -39,20 +31,6 @@ div#video {
 div#video iframe {
     width: 255px;
     height: 155px;
-}
-
-#people {
-    position: absolute;
-    bottom: 65px;
-    left: 40px;
-    width: 140px;
-}
-
-#car {
-    position: absolute;
-    bottom: 46px;
-    left: 180px;
-    width: 230px;
 }
 
 div#sea {
@@ -409,6 +387,8 @@ div#sea {
     }
 }
 
+
+/* 
 .moon {
     position: absolute;
     top: 10%;
@@ -452,6 +432,54 @@ div#sea {
     box-shadow: inset -1.5px 0.75px 0 0 #aaa;
     top: 60px;
     right: 25px;
+} */
+
+
+/* yellow moon */
+
+.moon {
+    position: absolute;
+    top: 10%;
+    right: 200px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #f5e6a5;
+    box-shadow: inset 20px -10px 0 0 #d9c16d;
+    cursor: pointer;
+}
+
+.moon .crater1 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #f1d68f;
+    box-shadow: inset -3px 1.5px 0 0 #d9c16d;
+    top: 20px;
+    right: 20px;
+}
+
+.moon .crater2 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f1d68f;
+    box-shadow: inset -1px 0.5px 0 0 #d9c16d;
+    top: 45px;
+    right: 50px;
+}
+
+.moon .crater3 {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #f1d68f;
+    box-shadow: inset -1.5px 0.75px 0 0 #d9c16d;
+    top: 60px;
+    right: 25px;
 }
 
 @media (min-width: 1000px) {
@@ -460,14 +488,6 @@ div#sea {
     }
     .icons .row span {
         font-size: 56px;
-    }
-    #people {
-        left: 80px;
-        bottom: 70px;
-        width: 160px;
-    }
-    div#beach {
-        background-size: 2000px;
     }
     div#video {
         right: 290px;
@@ -497,7 +517,6 @@ div#sea {
     text-align: center;
     font-size: 24px;
     display: none;
-    /* Initially hidden */
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
