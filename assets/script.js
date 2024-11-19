@@ -14,7 +14,6 @@ var canvas = document.getElementById('canvas'),
     ch = window.innerHeight,
 
     fireworks = [],
-
     particles = [],
 
     hue = 120,
@@ -27,7 +26,6 @@ var canvas = document.getElementById('canvas'),
     mousedown = false,
 
     mx,
-
     my;
 
 canvas.width = cw;
@@ -67,14 +65,12 @@ function Firework(sx, sy, tx, ty) {
     this.speed = 2;
     this.acceleration = 1.05;
     this.brightness = random(50, 70);
-
     this.targetRadius = 1;
 }
 
 Firework.prototype.update = function(index) {
 
     this.coordinates.pop();
-
     this.coordinates.unshift([this.x, this.y]);
 
     if (this.targetRadius < 8) {
@@ -92,7 +88,6 @@ Firework.prototype.update = function(index) {
 
     if (this.distanceTraveled >= this.distanceToTarget) {
         createParticles(this.tx, this.ty);
-
         fireworks.splice(index, 1);
     } else {
 
@@ -131,7 +126,6 @@ function Particle(x, y) {
     this.speed = random(1, 10);
 
     this.friction = 0.95;
-
     this.gravity = 1;
 
     this.hue = random(hue - 20, hue + 20);
@@ -170,7 +164,6 @@ Particle.prototype.draw = function() {
 
 
 function createParticles(x, y) {
-
     var particleCount = 30;
     while (particleCount--) {
         particles.push(new Particle(x, y));
@@ -257,8 +250,8 @@ window.onload = function() {
 function reveal() {
     document.querySelector('.merrywrap').style.backgroundColor = 'transparent';
 
-    loop();
     anim();
+    loop();
 
     // Reveal the moon by changing the display style
     document.getElementById("moon").style.display = "block"; // Show the moon when step 4 is reached
@@ -397,7 +390,6 @@ Letter.prototype.step = function() {
 
             ++this.tick;
             if (this.tick >= this.spawningTime) {
-
                 this.tick = 0;
                 this.spawned = true;
             }
